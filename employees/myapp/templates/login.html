@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+  
+    {% block title %}LOGIN{% endblock %}
+
+{% block content %}
+
+<div class="description">
+  <h1>Login</h1>
+<form action="{% url 'logins' %}" method="post">
+{% csrf_token %}
+
+
+	<div class="form-group">
+	  <input type="text" class="form-control" placeholder="username" name="username" id="username" maxlength="20">
+	</div>
+	<div class="form-group">
+	  <input type="password" class="form-control" placeholder="password" name="password" id="password" >
+	</div>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
+    {% endfor %}
+</ul>
+{% endif %}
+<input type="submit" class="btn btn-secondary btn-block" value="submit" name="submit">
+</form>
+	
+</div>
+{% endblock %}

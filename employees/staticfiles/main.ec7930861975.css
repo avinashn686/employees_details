@@ -1,0 +1,100 @@
+
+.Heading {
+  left: 50%;
+  position: absolute;
+  top: 60%;
+  transform: translate(-50%, -55%);
+  text-align: center;
+}
+
+.Heading .h1 {
+  color: green;
+}
+@media screen and (max-width: 600px) {
+  div.content {
+    display: none;
+  }
+}
+.features .form-control,
+.features .input {
+    border-radius: 0;
+}
+.features .btn {
+  background-color: #589b37;
+  border: 1px solid #589b37;
+  color: #fff;
+  margin-top: 20px;
+  
+}
+.features .btn:hover {
+  background-color: #333;
+  border: 1px solid #333;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #f2f6e9;
+}
+/*--- navigation bar ---*/
+.navbar {
+  background:#6ab446;
+}
+.nav-link,
+.navbar-brand {
+  color: #fff;
+  cursor: pointer;
+}
+.nav-link {
+  margin-right: 1em !important;
+}
+.nav-link:hover {
+  color: #000;
+}
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.description {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -55%);
+  text-align: center;
+}
+.description h1 {
+  color: #6ab446;
+}
+.buttons {
+  left: 50%;
+  position: absolute;
+  top: 60%;
+  transform: translate(-50%, -60%);
+ /* text-align: center;*/
+}
+/*.buttons {
+  resize: both;
+  overflow: auto;
+}*/
+.buttons button:hover {
+  border:1px solid #fff;
+  background:#fff;
+  color:#000;
+}
+.chip {
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+}
+
+.chip img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}

@@ -1,0 +1,56 @@
+{% extends "base_1.html" %}
+{% block title %}HOME{% endblock %}
+{% load static %}
+
+{% block content %}
+
+
+
+         
+  <table class="table table-striped">
+    <thead>
+    	{% csrf_token %}
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Address</th>
+        <th>Phonenumber</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for i in data %}
+      <tr>
+        <td>{{ i.empid }}</td>
+        <td>{{ i.name }}</td>
+        <td>{{ i.age }}</td>
+        <td>{{ i.address}}</td>
+        <td>{{ i.phonenumber}}</td>
+        <td>{{ i.email}}</td>
+      </tr>
+     {% endfor %}
+    </tbody>
+  </table>
+
+  				<!-- <table border="1">
+					<th>name</th>
+					<th>age</th>
+					<th>address</th>
+					<th>job</th>
+					{% for i in object_list %}
+					<tr>
+
+						<td>{{i.name}}</td>
+						<td>{{i.age}}</td>
+						<td>{{i.address}}</td>
+						<td>{{i.job}}</td>
+
+					</tr>
+					{%endfor %}
+
+				</table>
+ -->
+</div>
+
+{% endblock %}

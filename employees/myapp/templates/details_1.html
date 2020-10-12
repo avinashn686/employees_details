@@ -1,0 +1,64 @@
+{% extends "base_1.html" %}
+{% block title %}HOME{% endblock %}
+{% load static %}
+
+{% block content %}
+
+
+
+<div class="chip">
+  {% if data.image %}
+  <img src= "{{ data.image.url }}" alt="Person" width="96" height="96"/>{{ data.username }}
+  {% else %}
+  <img src="{% static  'test.jpeg' %}" alt="Person" width="96" height="96"/>{{ data.username }}
+  {%endif %}
+
+
+  <div class="container">         
+  <table class="table table-striped">
+    <thead>
+    	{% csrf_token %}
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Address</th>
+        <th>Phonenumber</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ data.empid}}</td>
+        <td>{{ data.name}}</td>
+        <td>{{ data.age}}</td>
+        <td>{{ data.address}}</td>
+        <td>{{ data.phonenumber}}</td>
+        <td>{{ data.email}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  <a class="logout" href="{% url 'logout' %}">logout</a>
+</div>
+  				<!-- <table border="1">
+					<th>name</th>
+					<th>age</th>
+					<th>address</th>
+					<th>job</th>
+					{% for i in object_list %}
+					<tr>
+
+						<td>{{i.name}}</td>
+						<td>{{i.age}}</td>
+						<td>{{i.address}}</td>
+						<td>{{i.job}}</td>
+
+					</tr>
+					{%endfor %}
+
+				</table>
+ -->
+</div>
+
+{% endblock %}
